@@ -6,6 +6,7 @@ class StudentsController < ApplicationController
       name = params["name"].capitalize()
       students = Student.where("first_name = ? OR last_name = ?","#{name}","#{name}")
       puts "in cond"
+      
     end
     render json: students
   end
